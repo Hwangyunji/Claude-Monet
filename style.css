@@ -6,21 +6,32 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
     font-family: 'Nanum Myeongjo', serif;
-    font-family: 'Noto Sans KR', sans-serif
+    font-family: 'Noto Sans KR', sans-serif;
 }
+
 a {
     text-decoration: none;
 }
-.banner {
+
+a.banner {
     display: block;
     background: rgb(38, 89, 6);
     width: 500px;
     height: 650px;
     position: relative;
-    font-family: 'Noto Sans KR', sans-serif;
 }
-.banner .img {
+
+a.banner:hover {
+    background: linear-gradient(180deg, #5E82AA 66.31%, #265906 100%);
+}
+
+.img {
     position: absolute;
     width: 480px;
     height: 480px;
@@ -28,73 +39,61 @@ a {
     top: 128px;
 }
 
-.banner:hover {
-    background: linear-gradient(180deg, #5E82AA 66.31%, #265906 100%);
-}
 header {
     color: #fff;
     text-align: center;
 }
+header:hover {
+    animation-play-state: paused;
+}
+span:hover {
+    opacity: 1;
+}
+
 header > span:nth-child(1) {
     position: absolute;
-    width: 253px;
-    height: 55px;
     left: 124px;
     top: 12px;
-
-    font-family: 'NanumMyeongjo';
+    font-family: 'NanumMyeongjo', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
     line-height: 46px;
 
-     /* text-shadow: 2px 2px 4px #000; */
-    opacity: 1;
+    opacity: 0;
     animation-name: title;
     animation-duration: 10s;
     animation-iteration-count: infinite;
 }
 
-/* span2 */
 header > span:nth-child(2) {
     position: absolute;
-    width: 253px;
-    height: 56px;
     left: 124px;
     top: 62px;
-
-    font-family: 'NanumMyeongjo';
+    font-family: 'NanumMyeongjo', serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 50px;
     line-height: 56px;
 
-
-
-    opacity: 1;
+    opacity: 0;
     animation-name: title;
     animation-duration: 10s;
     animation-delay: 1s;
     animation-iteration-count: infinite;
 }
 
-/* span3 */
 header > span:nth-child(3) {
     position: absolute;
-    width: 430px;
-    height: 22px;
     left: 35px;
     top: 618px;
-
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
     line-height: 22px;
 
-
-
-    opacity: 1;
+    opacity: 0;
     animation-name: title;
     animation-duration: 10s;
     animation-delay: 2s;
@@ -103,6 +102,7 @@ header > span:nth-child(3) {
 
 @keyframes title {
     0% {opacity: 0;}
-    10% {opacity: 1;}
+    30% {opacity: 1;}
+    70% {opacity: 1;}
     100% {opacity: 0;}
 }
